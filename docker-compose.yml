@@ -1,0 +1,10 @@
+version: '3'
+services:
+  webgoat:
+    image: appsecco/owasp-webgoat-dot-net
+    container_name: webgoat_dotnet
+    ports:
+      - "8999:9000"
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
